@@ -3,7 +3,7 @@ import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'package:photograohy_app/pages/home_shortcuts.dart';
+import 'package:photograohy_app/pages/Home/home_shortcuts.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -33,10 +33,11 @@ class _HomeState extends State<Home> {
       appBar: EasySearchBar(
         onSearch: (value) => setState(() => searchValue = value),
         suggestions: _suggestions,
-        backgroundColor: Color.fromARGB(255, 126, 126, 126),
+        backgroundColor: Colors.green,
         actions: <Widget>[
           IconButton(
               onPressed: () {
+                // ignore: avoid_print
                 print("Click Action");
               },
               icon: const Icon(Icons.share)),
@@ -106,7 +107,7 @@ class _HomeState extends State<Home> {
         //tabActiveBorder:
         //Border.all(color: Theme.of(context).colorScheme.inversePrimary),
         //tabMargin: EdgeInsets.only(bottom: 4),
-        backgroundColor: Color.fromARGB(255, 126, 126, 126),
+        backgroundColor: Colors.green,
         // ignore: prefer_const_literals_to_create_immutables
         tabs: [
           GButton(

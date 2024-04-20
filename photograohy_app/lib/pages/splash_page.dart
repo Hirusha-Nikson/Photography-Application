@@ -30,30 +30,34 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: content(),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: content(),
+      ),
     );
   }
 
   Widget content() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            width: 100,
-            child: Lottie.network(
-                'https://lottie.host/b904a0fa-05ea-4df0-a3db-3a60a506e34b/zIBjcFqFlL.json'),
-          ),
-          const Text(
-            "P H O T O  P R O",
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.black54,
+    return SafeArea(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 100,
+              child: Lottie.network(
+                  'https://lottie.host/b904a0fa-05ea-4df0-a3db-3a60a506e34b/zIBjcFqFlL.json'),
             ),
-          ),
-        ],
+            const Text(
+              "P H O T O  P R O",
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.black54,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
